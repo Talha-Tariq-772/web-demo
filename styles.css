@@ -1,0 +1,441 @@
+/* ------------------------------------
+   GOOGLE FONT
+------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* ------------------------------------
+   PRELOADER
+------------------------------------- */
+#loader {
+    position: fixed;
+    inset: 0;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5000;
+    transition: 0.4s;
+}
+.spinner {
+    width: 55px;
+    height: 55px;
+    border: 6px solid #00eaff;
+    border-top: 6px solid transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+
+/* ------------------------------------
+   DARK MODE
+------------------------------------- */
+.dark-mode {
+    background: #0d1117 !important;
+    color: #e6f3ff !important;
+}
+
+/* DARK MODE HEADER */
+.dark-mode header {
+    background: #111;
+    border-bottom: 3px solid #00eaff;
+}
+
+/* DARK MODE LOGO TEXT */
+.dark-mode .logo h1 {
+    color: #e8faff !important;
+    text-shadow: 0 0 8px rgba(0,255,255,0.6);
+}
+
+/* DARK MODE TEXT (ALL PAGES) */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p,
+.dark-mode label {
+    color: #dff8ff !important;
+}
+
+/* DARK MODE IMAGES, IFRAME, FORM SHADOW */
+.dark-mode .image-row img,
+.dark-mode iframe,
+.dark-mode form {
+    box-shadow: 0 0 25px rgba(0,255,255,0.35);
+}
+
+/* DARK MODE FOOTER */
+.dark-mode footer {
+    background: #0b1b22 !important;
+    color: #d8f1ff !important;
+}
+
+/* Navigation in dark mode */
+.dark-mode nav a {
+    color: #a8e8ff;
+}
+.dark-mode nav a:hover {
+    background: #00eaff;
+    color: #000;
+    border-radius: 8px;
+    box-shadow: 0 0 14px rgba(0,255,255,0.6);
+}
+
+/* Dark Mode Buttons */
+.dark-mode button,
+.dark-mode .hero-btn {
+    border-radius: 10px !important;
+}
+.dark-mode button:hover,
+.dark-mode .hero-btn:hover {
+    box-shadow: 0 0 16px rgba(0,255,255,0.55);
+}
+
+/* ------------------------------------
+   DARK MODE FIX FOR FORM (NEW)
+------------------------------------- */
+.dark-mode form {
+    background: #0f1a20 !important;
+    border: 2px solid #00eaff;
+    color: #dff8ff !important;
+}
+
+/* FORM INPUTS DARK MODE */
+.dark-mode form input,
+.dark-mode form textarea {
+    background: #13232b !important;
+    color: #e6ffff !important;
+    border: 2px solid #00bcd4 !important;
+}
+
+/* Dark mode placeholder visibility */
+.dark-mode form input::placeholder,
+.dark-mode form textarea::placeholder {
+    color: #a8d8e8 !important;
+}
+
+
+/* ------------------------------------
+   DARK MODE TOGGLE BUTTON
+------------------------------------- */
+#themeToggle {
+    position: fixed;
+    bottom: 18px;
+    right: 18px;
+    padding: 12px 15px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 2000;
+    border: none;
+    transition: 0.3s;
+}
+#themeToggle:hover {
+    transform: scale(1.15);
+}
+
+
+/* ------------------------------------
+   GLOBAL TEXT & LAYOUT
+------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f7f9fc;
+    color: #1e2e35;
+    line-height: 1.75;
+    font-size: 17px;
+}
+
+/* Page horizontal padding */
+main, section {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+@media (max-width: 768px) {
+    main, section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* Fade reveal */
+section, main, footer {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+@keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Headings */
+h1, h2, h3 {
+    font-weight: 600;
+    color: #003b4f;
+}
+h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+    color: #355564;
+    margin-bottom: 18px;
+}
+
+
+/* ------------------------------------
+   HEADER
+------------------------------------- */
+header {
+    background: linear-gradient(120deg, #ffffff 0%, #e9fbff 100%);
+    box-shadow: 0 4px 18px rgba(0,0,0,0.1);
+    padding: 22px 30px;
+    border-bottom: 3px solid #00eaff;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.site-logo {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #00eaff;
+    box-shadow: 0 0 28px rgba(0,200,255,0.6);
+}
+.logo h1 {
+    font-size: 27px;
+    font-weight: 700;
+}
+
+
+/* ------------------------------------
+   NAVIGATION
+------------------------------------- */
+nav {
+    margin-top: 12px;
+}
+nav a {
+    text-decoration: none;
+    color: #00566e;
+    padding: 10px 16px;
+    font-weight: 600;
+    position: relative;
+    transition: 0.3s;
+}
+nav a::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #00eaff;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s;
+}
+nav a:hover::after {
+    width: 100%;
+}
+nav a:hover {
+    color: #00b7ff;
+}
+
+
+/* ------------------------------------
+   SEARCH BAR
+------------------------------------- */
+.search-bar {
+    text-align: center;
+    margin: 40px auto;
+}
+.search-bar input {
+    width: 350px;
+    padding: 10px;
+    border-radius: 7px;
+    border: 2px solid #00b7ff;
+    font-size: 16px;
+}
+.search-bar button {
+    padding: 10px 15px;
+    background: #0077ff;
+    color: white;
+    border-radius: 7px;
+    border: none;
+}
+
+
+/* ------------------------------------
+   HERO SECTION
+------------------------------------- */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 8%;
+    background: linear-gradient(135deg, #e9fbff, #ffffff);
+    border-bottom: 3px solid #00eaff;
+}
+.hero-content {
+    max-width: 50%;
+}
+.hero-title {
+    font-size: 50px;
+    font-weight: 700;
+}
+.hero-subtitle {
+    font-size: 20px;
+    line-height: 1.7;
+    max-width: 560px;
+}
+.hero-btn {
+    background: #00c6ff;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+.hero-btn:hover {
+    background: #0099cc;
+    box-shadow: 0 0 15px rgba(0,200,255,0.4);
+}
+.hero-image img {
+    width: 420px;
+    animation: heroFloat 4s ease-in-out infinite alternate;
+}
+@keyframes heroFloat {
+    from { transform: translateY(0); }
+    to { transform: translateY(-12px); }
+}
+
+
+/* ------------------------------------
+   IMAGE ROW + GLASS EFFECT
+------------------------------------- */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+.image-row img {
+    width: 330px;
+    height: 250px;
+    border-radius: 16px;
+    object-fit: cover;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 4px 25px rgba(0,0,0,0.15);
+    transition: 0.35s;
+}
+.image-row img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 30px rgba(0,0,0,0.35);
+}
+
+
+/* ------------------------------------
+   VIDEO
+------------------------------------- */
+.video-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+.video-container iframe {
+    width: 70%;
+    height: 380px;
+    border-radius: 12px;
+    box-shadow: 0 6px 28px rgba(0,0,0,0.25);
+}
+@media (max-width: 768px) {
+    .video-container iframe {
+        width: 95%;
+        height: 240px;
+    }
+}
+
+
+/* ------------------------------------
+   CONTACT FORM
+------------------------------------- */
+form {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+form label {
+    font-weight: 600;
+}
+form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #00b2ff;
+    font-size: 16px;
+}
+form button {
+    margin-top: 15px;
+    padding: 12px;
+    background: #00a2ff;
+    color: white;
+    border-radius: 10px;
+    font-size: 17px;
+    transition: 0.3s;
+}
+form button:hover {
+    background: #007acc;
+}
+
+
+/* ------------------------------------
+   FOOTER
+------------------------------------- */
+footer {
+    background: #00394f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+
+/* ------------------------------------
+   RESPONSIVE HERO
+------------------------------------- */
+@media (max-width: 800px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content {
+        max-width: 100%;
+    }
+    .hero-image img {
+        width: 300px;
+        margin-top: 20px;
+    }
+}
